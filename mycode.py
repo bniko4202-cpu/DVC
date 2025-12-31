@@ -9,6 +9,10 @@ data = {'Name': ['Alice', 'Bob', 'Charlie'],
 df = pd.DataFrame(data)
 
 
+new_row_loc = {'Name': 'David', 'Age': 28, 'City': 'San Francisco'}
+
+df = pd.concat([df, pd.DataFrame([new_row_loc])], ignore_index=True)
+
 
 os.makedirs('data', exist_ok = True)
 
